@@ -240,8 +240,7 @@ namespace Square_Chaser_Summative
                 winnerLabel.Text = "Player 1 Wins!";
                 Refresh();
 
-                Thread.Sleep(5000);
-                Application.Exit();
+                endProgram();
             }
             else if (player2Score == 5)
             {
@@ -251,8 +250,7 @@ namespace Square_Chaser_Summative
                 winnerLabel.Text = "Player 2 Wins!";
                 Refresh();
 
-                Thread.Sleep(5000);
-                Application.Exit();
+                endProgram();
             }
 
             Refresh();
@@ -270,6 +268,12 @@ namespace Square_Chaser_Summative
             //End Speed Boost
             player2SpeedTimer.Enabled = false;
             player2Speed = 5;
+        }
+
+        public void endProgram()
+        {
+            Thread.Sleep(5000);
+            Application.Exit();
         }
     }
 }
